@@ -6,33 +6,27 @@
 
   "extends": [
     "airbnb-typescript/base",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:import/typescript",
     "prettier"
   ],
 
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.json"
+    "sourceType": "module"
   },
   "rules": {
+    // Plugins rules --start
     "prettier/prettier": ["error"],
-    "import/no-unresolved": "warn",
-    "import/extensions": "warn",
-    "@typescript-eslint/no-var-requires": "warn",
-    "@typescript-eslint/no-shadow": "warn",
-    "@typescript-eslint/no-loss-of-precision": "warn",
-    "@typescript-eslint/no-use-before-define": "warn",
-    "@typescript-eslint/no-loop-func": "warn",
-    "@typescript-eslint/naming-convention": "warn",
-    "@typescript-eslint/ban-ts-comment": "warn",
     "ava/prefer-async-await": "error",
     "ava/no-async-fn-without-await": "error",
+    // Plugins rules --end
 
     // disable es6 rules -- start
     "arrow-body-style": "off",
@@ -76,7 +70,7 @@
     "no-await-in-loop": "off",
     "no-compare-neg-zero": "off",
     "no-cond-assign": "off",
-    "no-console": "warn",
+    "no-console": "off",
     "no-constant-condition": "off",
     "no-control-regex": "off",
     "no-debugger": "off",
@@ -310,12 +304,10 @@
     "unicode-bom": "off",
     "wrap-regex": "off"
     // Stylistic Issues -- end
-
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "typescript": {},
         "extensions": [".js", ".ts"]
       }
     }

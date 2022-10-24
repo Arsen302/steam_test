@@ -1,6 +1,7 @@
 {
-  "*.{js,ts}": [
-    "prettier --config .prettierrc --write ./src",
-    "eslint . --ext .ts --fix"
+  "*.{js, ts}": [
+    "prettier --config .prettierrc  --write ./src",
+    "eslint . --ext .ts --fix",
+    "editorconfig-checker"
   ]
 }
