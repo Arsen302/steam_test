@@ -1,7 +1,6 @@
-.prettierrc
 {
-  "singleQuote": true,
-  "tabWidth": 2,
   "semi": true,
-  "printWidth": 120,
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2
 }
